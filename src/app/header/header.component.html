@@ -1,0 +1,15 @@
+<header class="header">
+  <a class="logo" href="#inicio">
+    <img src="/assets/original/logo-grupo-guard-brasil.png" alt="Grupo Guard Brasil">
+  </a>
+  <button class="menu-toggle" aria-controls="nav" [attr.aria-expanded]="menuOpen" (click)="toggleMenu()">Menu</button>
+  <nav id="nav" [class.open]="menuOpen">
+    <a href="#quem-somos" (click)="closeMenu()">Quem Somos</a>
+    <a href="#planos" (click)="closeMenu()">Planos</a>
+    <a href="#contato" (click)="closeMenu()">Contato</a>
+  </nav>
+  <div class="header-actions">
+    <a href="#contato" class="outline-btn">2ª VIA DE BOLETO</a>
+    <a routerLink="/acesso" class="outline-btn">ÁREA DO ASSOCIADO</a>
+  </div>
+</header>

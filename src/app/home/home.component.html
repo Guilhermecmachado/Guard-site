@@ -1,0 +1,141 @@
+<app-header />
+<main id="inicio">
+  <section class="hero">
+    <div class="hero-content">
+      <h1>NÃO ESPERE QUE UM <strong>ACIDENTE INESPERADO</strong> ACABE COM O SEU DIA!</h1>
+      <p>Conheça a nossa Associação de Proteção Veicular e veja como podemos ajudá-lo a cuidar do seu patrimônio.</p>
+    </div>
+    <aside class="hero-side">
+      <a href="https://www.instagram.com/grupoguardbrasil/" target="_blank" rel="noreferrer">IG</a>
+      <a href="tel:08007779018">SOS</a>
+    </aside>
+  </section>
+
+  <div class="ticker" aria-label="Proteção e segurança">
+    <div>
+      <span><img src="/assets/original/icon-escudo.svg" alt="">PROTEÇÃO</span>
+      <span><img src="/assets/original/icon-escudo.svg" alt="">SEGURANÇA</span>
+      <span><img src="/assets/original/icon-escudo.svg" alt="">PROTEÇÃO</span>
+      <span><img src="/assets/original/icon-escudo.svg" alt="">SEGURANÇA</span>
+      <span><img src="/assets/original/icon-escudo.svg" alt="">PROTEÇÃO</span>
+      <span><img src="/assets/original/icon-escudo.svg" alt="">SEGURANÇA</span>
+      <span><img src="/assets/original/icon-escudo.svg" alt="">PROTEÇÃO</span>
+      <span><img src="/assets/original/icon-escudo.svg" alt="">SEGURANÇA</span>
+    </div>
+  </div>
+
+  <section class="benefits" id="beneficios">
+    <div class="title">
+      <h2>Tranquilidade para você e proteção<br>para o seu veículo</h2>
+      <p>Temos os melhores benefícios para garantir a sua tranquilidade e segurança.</p>
+    </div>
+    <div class="benefit-grid">
+      <article><img src="/assets/original/icon-box-1.svg" alt=""><span>Roubo e furto</span></article>
+      <article><img src="/assets/original/icon-box-2.svg" alt=""><span>Colisão e incêndio</span></article>
+      <article><img src="/assets/original/icon-box-3.svg" alt=""><span>Fenômenos naturais</span></article>
+      <article><img src="/assets/original/icon-box-4.svg" alt=""><span>Acidente pessoal por passageiro</span></article>
+      <article><img src="/assets/original/icon-box-5.svg" alt=""><span>Danos a terceiros</span></article>
+      <article><img src="/assets/original/icon-box-6.svg" alt=""><span>Cobertura de vidros</span></article>
+      <article><img src="/assets/original/icon-box-7.svg" alt=""><span>Assistência jurídica</span></article>
+      <article><img src="/assets/original/icon-box-8.svg" alt=""><span>Pane elétrica e mecânica</span></article>
+    </div>
+  </section>
+
+  <section class="vehicle-gallery" id="planos">
+    <div class="vehicle-copy">
+      <span class="kicker">PROTEÇÃO GUARD</span>
+      <h2 id="vehicle-title">{{ selectedVehicle.title }}</h2>
+      <ul>
+        <li>Roubo e Furto</li>
+        <li>Colisão e Incêndio</li>
+        <li>Fenômenos da Natureza</li>
+        <li>Assistência 24 horas</li>
+      </ul>
+    </div>
+    <div class="vehicle-stage"><img id="vehicle-image" [src]="selectedVehicle.src" [alt]="selectedVehicle.alt"></div>
+    <div class="vehicle-tabs" role="tablist" aria-label="Tipos de veículo">
+      @for (vehicle of vehicles; track vehicle.id) {
+        <button
+          [class.active]="selectedVehicle.id === vehicle.id"
+          role="tab"
+          [attr.aria-selected]="selectedVehicle.id === vehicle.id"
+          (click)="selectVehicle(vehicle)"
+        >
+          <img [src]="vehicle.src" [alt]="vehicle.alt">
+        </button>
+      }
+    </div>
+  </section>
+
+  <section class="advantages">
+    <img class="umbrella" src="/assets/original/guarda-chuva.png" alt="">
+    <div class="title">
+      <h2>Conheça algumas das vantagens<br>de ser um associado <strong>GUARD</strong></h2>
+    </div>
+    <div class="advantage-grid">
+      <article>✓<span>Proteção veicular completa incluindo <b>Guincho Ilimitado</b></span></article>
+      <article>✓<span>Primeira e única proteção com sede no <b>Vale do Paraíba</b></span></article>
+      <article>✓<span>Assistência <b>24/7</b> em todo o território nacional</span></article>
+      <article>✓<span>Sem consulta ao<br><b>SPC e Serasa</b></span></article>
+    </div>
+  </section>
+
+  <section class="purpose" id="quem-somos">
+    <div class="purpose-copy">
+      <h2>A sua segurança<br>é o <strong>nosso propósito.</strong></h2>
+      <p>Na Guard Brasil, acreditamos que as pessoas são o nosso maior ativo e trabalhamos incansavelmente para proteger aquilo que mais importa para você: sua vida, sua família e seu patrimônio.</p>
+      <img src="/assets/original/video.png" alt="Equipe reunida em sinal de cooperação">
+    </div>
+    <div class="values">
+      <article><img src="/assets/original/icon-etica.svg" alt=""><h3>Ética</h3><p>Agimos com responsabilidade e respeito em todas as nossas operações, garantindo confiança e credibilidade.</p></article>
+      <article><img src="/assets/original/icon-contribuicao.svg" alt=""><h3>Contribuição</h3><p>Estamos comprometidos em proteger o seu patrimônio com transparência e eficiência.</p></article>
+      <article><img src="/assets/original/icon-cuidado.svg" alt=""><h3>Cuidado</h3><p>Cuidamos de cada detalhe com zelo e soluções adequadas às necessidades de cada associado.</p></article>
+      <article><img src="/assets/original/icon-rapidez.svg" alt=""><h3>Eficiência</h3><p>Atuamos com agilidade desde o atendimento até a resolução das solicitações.</p></article>
+    </div>
+  </section>
+
+  <section class="how">
+    <div class="how-inner">
+      <div class="how-copy">
+        <h2>Como fazemos?</h2>
+        <p>Trabalhamos incansavelmente para oferecer um serviço de proteção veicular de qualidade, com agilidade e eficiência. Estamos comprometidos em oferecer sempre o melhor para garantir a segurança e tranquilidade dos nossos associados.</p>
+        <a href="#contato" class="green-btn">FALE COM A GENTE</a>
+      </div>
+      <img src="/assets/original/fazemos.png" alt="Atendimento Guard">
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <div class="clients">
+      <img src="/assets/original/clientes.png" alt="Clientes Guard">
+      <span>+ 10.000 clientes satisfeitos</span>
+    </div>
+    <h2>O que nossos clientes dizem sobre nós</h2>
+    <div class="testimonial-shell">
+      <button class="carousel-btn prev" aria-label="Depoimento anterior" (click)="prevTestimonial()">‹</button>
+      <div class="testimonial-card">
+        <b>“</b>
+        <p id="testimonial-text">{{ testimonial.text }}</p>
+        <strong id="testimonial-author">{{ testimonial.author }}</strong>
+      </div>
+      <button class="carousel-btn next" aria-label="Próximo depoimento" (click)="nextTestimonial()">›</button>
+    </div>
+    <div class="dots" aria-label="Seleção de depoimento">
+      @for (item of testimonials; track $index) {
+        <button
+          [class.active]="$index === testimonialIndex"
+          [attr.aria-label]="'Mostrar depoimento ' + ($index + 1)"
+          (click)="selectTestimonial($index)"
+        ></button>
+      }
+    </div>
+  </section>
+
+  <section class="sos">
+    <div>
+      <h2>Precisando de socorro imediato?</h2>
+      <a href="tel:08007779018">☎ Ligue para <strong>0800 777 9018</strong></a>
+    </div>
+  </section>
+</main>
+<app-footer />

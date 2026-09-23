@@ -2,15 +2,34 @@
 
 Landing page responsiva da Guard Proteção Veicular, baseada no visual do site institucional original.
 
-## Visualização local
+## Stack
 
-Abra `dist/index.html` no navegador ou execute um servidor estático apontando para a pasta `dist`.
+- Angular 20 (standalone components + standalone build)
+- HTML/CSS/JS com rotas SPA
 
 ## Estrutura
 
-- `dist/index.html`: página institucional
-- `dist/acesso/index.html`: área do associado
-- `dist/styles.css`: estilos responsivos
-- `dist/script.js`: menu, galeria de veículos e depoimentos
-- `dist/assets/original`: imagens e ícones do site
+- `src/app/home/`: página institucional (landing page)
+- `src/app/login/`: área do associado (`/acesso`)
+- `src/app/header/`, `src/app/footer/`: componentes compartilhados
+- `src/styles.css`: estilos globais responsivos
+- `public/assets/original/`: imagens e ícones do site
 
+## Desenvolvimento local
+
+```bash
+npm install
+ng serve -o
+```
+
+## Build de produção
+
+```bash
+ng build
+```
+
+A saída vai para `dist/guard-site/browser`. Para visualizar localmente:
+
+```bash
+npx http-server dist/guard-site/browser -o
+```

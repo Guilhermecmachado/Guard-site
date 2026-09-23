@@ -1,4 +1,91 @@
-*.zip
+# See https://docs.github.com/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
+
+# Compiled output
+/dist
+/tmp
+/out-tsc
+/bazel-out
+
+# Node
+/node_modules
+npm-debug.log
+yarn-error.log
+
+# IDEs and editors
+.idea/
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# Visual Studio Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/*
+
+# Miscellaneous
+/.angular/cache
+.sass-cache/
+/connect.lock
+/coverage
+/libpeerconnection.log
+testem.log
+/typings
+__screenshots__/
+
+# System files
 .DS_Store
 Thumbs.db
+desktop.ini
+ehthumbs.db
 
+# Segredos e variáveis de ambiente
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets/
+credentials/
+
+# Banco de dados (não deve existir neste projeto)
+*.sqlite
+*.sqlite3
+*.db
+*.mdb
+*.sql
+*.sql.gz
+
+# Logs
+logs/
+*.log
+
+# Cache
+.cache/
+.parcel-cache/
+.eslintcache
+*.tsbuildinfo
+
+# Build (além de /dist já ignorado acima)
+build/
+out/
+.next/
+.nuxt/
+.turbo/
+
+# Editor
+*.swp
+*.swo
+*~
+
+# Arquivos comprimidos
+*.zip
+*.tar
+*.tar.gz
+*.rar
+*.7z
