@@ -7,6 +7,7 @@ interface Vehicle {
   title: string;
   src: string;
   alt: string;
+  coverages: string[];
 }
 
 interface Testimonial {
@@ -21,9 +22,27 @@ interface Testimonial {
 })
 export class HomeComponent {
   readonly vehicles: Vehicle[] = [
-    { id: 'moto', title: 'Sua moto mais segura e protegida', src: '/assets/original/moto.png', alt: 'Moto protegida pela Guard' },
-    { id: 'carro', title: 'Seu carro mais seguro e protegido', src: '/assets/original/carro.png', alt: 'Carro protegido pela Guard' },
-    { id: 'van', title: 'Sua van mais segura e protegida', src: '/assets/original/van.png', alt: 'Van protegida pela Guard' },
+    {
+      id: 'moto',
+      title: 'Sua moto mais segura e protegida',
+      src: '/assets/original/moto.png',
+      alt: 'Moto protegida pela Guard',
+      coverages: ['Roubo e Furto', 'Colisão e Incêndio', 'Assistência 24 horas'],
+    },
+    {
+      id: 'carro',
+      title: 'Seu carro mais seguro e protegido',
+      src: '/assets/original/carro.png',
+      alt: 'Carro protegido pela Guard',
+      coverages: ['Roubo e Furto', 'Colisão e Incêndio', 'Fenômenos da Natureza', 'Assistência 24 horas'],
+    },
+    {
+      id: 'van',
+      title: 'Sua van mais segura e protegida',
+      src: '/assets/original/van.png',
+      alt: 'Van protegida pela Guard',
+      coverages: ['Roubo e Furto', 'Colisão e Incêndio', 'Fenômenos da Natureza', 'Assistência 24 horas'],
+    },
   ];
 
   readonly testimonials: Testimonial[] = [
